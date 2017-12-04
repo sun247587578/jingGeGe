@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鸟</title>
+    <link rel="stylesheet" href="kj/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="kj/zui/dist/css/zui.min.css">
+    <link rel="stylesheet" href="my/sj.min.css">
+    <script src="kj/jquery/dist/jquery.min.js"></script>
+    <script src="kj/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            width: 100%;
+            line-height: 50px;
+        }
+
+        body {
+            /* background:#333A6E; */
+            /* Safari 5.1 - 6.0 */
+            background: -webkit-linear-gradient(to bottom right, #333A6E 4%, #333fff 96%);
+            background: -moz-linear-gradient(to bottom right, #333A6E, #333fff);
+            background: -o-linear-gradient(to bottom right, #333A6E, #333fff);
+            background: linear-gradient(to top left, #333A6E 4%, #333fff 96%);
+            /* Opera 11.1 - 12.0 */
+            /* Firefox 3.6 - 15 */
+        }
+
+        * {
+            font-family: SimSun;
+        }
+
+        .title {
+            font-family: SimSun;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .stitle {
+            font-family: SimSun;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 400;
+            padding-left: 30px;
+        }
+
+        .touxiang {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-top: 5px;
+            background: #fff;
+            display: inline-block;
+        }
+
+        .sname {
+            color: #fff;
+            font-size: 15px;
+            margin-right: 40%
+        }
+
+        ul li {
+            list-style: none;
+            line-height: 40px;
+            font-size: 20px;
+            font-family: SimSun;
+            color: #fff;
+            margin-top: 10px;
+            text-align: center;
+            background: #009694;
+        }
+
+        .conBody {
+            width: 100%;
+            background: #fff;
+            display: table;
+            height: 300px;
+            overflow: auto
+        }
+
+        .niaoTile {
+            font-size: 30px;
+            position: relative;
+            bottom: 20px;
+            left: 20px;
+            color: #ccc;
+            font-weight: 900;
+        }
+
+        .hr {
+            width: 100%;
+            height: 20px;
+            background: #ccc
+        }
+
+        .yuan {
+            display: block;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            background: #000387;
+            position: relative;
+            /* bottom: -7px; */
+            left: -10px
+        }
+
+        .smg {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .shuxian {
+            display: block;
+            width: 2px;
+            height: 30px;
+            background: #ccc;
+        }
+        /* .msg::before{
+            content:'';
+            display: inline-block;
+            width: 2px;
+            height:30px;
+            background:#ccc;
+        } */
+
+        .borderLeft {
+            border-left: 1px solid #ccc
+        }
+
+        .msg .msgTile {
+            line-height: 30px;
+            background: #36A9CE;
+            cursor: pointer;
+        }
+
+        .msgCont {
+            background: #D0E17D;
+            padding-top: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .msgImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: #ccc;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .fontw {
+            font-weight: bolder;
+        }
+
+        .scont {
+            width: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .lb {
+            width: 9999px;
+            position: relative;
+            padding: 0;
+        }
+
+        .lb li {
+            height: 250px;
+            /* width: 200px; */
+            border: 1px solid #9900CC;
+            margin-left: 10px;
+            float: left;
+        }
+
+        .prev {
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .next {
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bj">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="stitle mt-25">国家电网<br>STATE</h4>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="title">输电线路鸟类灾害</h3>
+                </div>
+                <div class="col-md-4 pt-10">
+                    <div class="f-r sname ">张继</div>
+                    <div class="f-r mr-10">
+                        <div class="touxiang"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="pl-60" style="color:#fff">国网江西省电力公司</p>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>首页</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>鸟害数据报送</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>鸟害分析管理</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>鸟害风险评估</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>鸟害故障预警</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>鸟类管理</li>
+                        <li><span class="glyphicon glyphicon-plus-sign f-l mt-10 ml-10" aria-hidden="true"></span>系统管理</li>
+                    </ul>
+                </div>
+                <div class="col-md-10 pr-20">
+                    <div class="conBody clearfix">
+                        <div class="w80 f-l">
+                            <div class="pt-20 pl-20">
+                                <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true" style="font-size:60px;color:#009FD6"></span>
+                                <span class="niaoTile">鸟害数据</span>
+                                <span class="glyphicon glyphicon-list-alt f-r" aria-hidden="true" style="font-size:40px;color:#009FD6"></span>
+                                <span class="glyphicon glyphicon-picture f-r mr-20" aria-hidden="true" style="font-size:40px;color:#009FD6"></span>
+                            </div>
+                            <div style="">
+                                <div class="scont">
+                                    <ul class="lb">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+<!--
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+-->
+                                    </ul>
+                                </div>
+                                <div class="clearfix pd-20">
+                                    <span class="f-l prev" onclick="lbPrev()"><<</span>
+                                    <span class="f-r next"  onclick="lbNext()">>></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w20 f-l text-c">
+                            <div class="text-c pd-20">
+                                <button type="button" class="btn" style="background:#9900CC;color:#fff">报送鸟类</button>
+                            </div>
+                            <p class="text-c">您共报送鸟类20张</p>
+                            <div class="hr"></div>
+                            <p class="text-c">最新消息</p>
+                            <div>
+                                <p class="mt-10 text-c">2017-09-10<br>18:35:23</p>
+                                <div style="padding-left:50%">
+                                    <span class="yuan"></span>
+                                    <span class="shuxian"></span>
+                                </div>
+
+                                <div class="msg pl-10 pr-10 clearfix">
+                                    <div class="f-l w50 msgTile ">报送鸟类</div>
+                                    <div class="f-l w50 msgTile borderLeft">新消息</div>
+                                    <div class="msgCont clearfix">
+                                        <div class="msgImg"></div>
+                                        <p>张继 报送了鸟类 【大燕】</p>
+                                    </div>
+
+                                </div>
+                                <div style="padding-left:50%">
+                                    <span class="shuxian"></span>
+                                    <span class="yuan"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mt-10 text-c">2017-09-10<br>18:35:23</p>
+                                <div style="padding-left:50%">
+                                    <span class="yuan"></span>
+                                    <span class="shuxian"></span>
+                                </div>
+
+                                <div class="msg pl-10 pr-10 clearfix">
+                                    <div class="f-l w50 msgTile ">报送鸟类</div>
+                                    <div class="f-l w50 msgTile borderLeft">新消息</div>
+                                    <div class="msgCont clearfix">
+                                        <div class="msgImg"></div>
+                                        <p>张继 报送了鸟类 【大燕】</p>
+                                    </div>
+
+                                </div>
+                                <div style="padding-left:50%">
+                                    <span class="shuxian"></span>
+                                    <span class="yuan"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var index = 0;
+        var lbwidth = $('.scont').parent().width();
+        var moveWidth = lbwidth / 2
+        $(document).ready(function () {
+            $('.conBody').height($(window).height() - 100)
+            $(window).resize(function () {
+                $('.conBody').height($(window).height() - 100)
+            });
+
+            console.log(lbwidth)
+            $('.scont').width(lbwidth)
+            $('.lb li').width(lbwidth / 2 - 10);
+        });
+
+        function lbPrev() {
+            index--;
+            console.log(lbwidth * index)
+            if(index < 0){
+                index =0
+                return false
+            }
+            $(".lb").stop().animate({
+                left: -lbwidth * index +'px'
+            });
+        }
+
+        function lbNext() {
+            console.log(index)
+            index++
+            if(index > $('.lb li').length/2-1){
+                index = parseInt($('.lb li').length/2-1)
+                return false
+            }
+            $(".lb").stop().animate({
+                left: -lbwidth * index-12 + 'px'
+            });
+        }
+
+    </script>
+</body>
+
+</html>
